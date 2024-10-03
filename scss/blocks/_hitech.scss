@@ -1,0 +1,112 @@
+.hitech{
+    margin: 0 10px clamp(5rem, 1.25rem + 15.38vw, 12.5rem);
+    padding: 80px 0;
+    border-radius: 50px;
+    backdrop-filter: blur(300px);
+    background: rgba(255, 255, 255, 0.05);
+    &__inner{
+        display: flex;
+        flex-direction: column;
+        gap: 54px;
+    }
+    &__title{
+        @extend %title;
+        font-size: clamp(1.25rem, 0.375rem + 3.59vw, 3rem);
+        text-align: center;
+    }
+    &__items{
+        display: grid;
+        grid-template-columns: repeat(12,1fr);
+        gap: 30px;
+        margin-bottom: 25px;
+    }
+    &__item{
+        padding: 33px 27px;
+        border-radius: $borderRadiusCard;
+        background: linear-gradient(140.79deg, rgb(33, 9, 85) -6.981%,rgb(3, 2, 40) 100.88%);
+        border: 1px solid #FFFFFF66;
+        display: flex;
+        flex-direction: column;
+        gap: 11px;
+        &--bigWidth{
+            grid-column: span 8;
+        }
+        &--small{
+            grid-column: span 4;
+        }
+        &--bigHeight{
+            grid-column: span 5;
+            grid-row: span 2;
+        }
+        &--average{
+            grid-column: span 7;
+        }
+        &:nth-child(3){
+            .hitech__item-info{
+                max-width: 263px;
+            }
+        }
+    }
+    &__item-year{
+        text-transform: uppercase;
+        font-size: 64px;
+        @extend %rubik-700;
+    }
+    &__item-info{
+        margin-bottom: 19px;
+    }
+    &__item-summbox{
+        display: flex;
+        flex-direction: column;
+    }
+    &__item-summ-text,
+    &__item-summ{
+        @extend %text;
+        font-size: 20px;
+    }
+    &__link{
+        @extend %link;
+        margin: 0 auto;
+    }
+    @media(max-width:1023px){
+        &__item{
+            &--bigWidth{
+                grid-column: span 12;
+            }
+            &--small{
+                grid-column: span 6;
+            }
+            &--bigHeight{
+                grid-column: span 6;
+                grid-row: span 1;
+            }
+            &--average{
+                grid-column: span 6;
+            }
+        }
+    }
+    @media(max-width:800px){
+        padding: 50px 0;
+        &__inner{
+            gap: 50px;
+        }
+        &__item{
+            padding-left: 30px;
+            &--small,
+            &--bigHeight,
+            &--average{
+                grid-column: span 12;
+            }
+        }
+    }
+    @media(max-width:410px){
+        &__item-info{
+            margin-bottom: 7px;
+        }
+        &__item.hitech__item--bigWidth{
+            padding-bottom: 44px;
+        }
+    }
+    
+}
+

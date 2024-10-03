@@ -1,0 +1,12 @@
+.roadmap-card{
+    border-radius: $borderRadiusCard;
+    border: 1px solid #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    &__year{
+        @extend %rubik-700;
+        font-size: 40px;
+        text-transform: uppercase;
+    }
+}

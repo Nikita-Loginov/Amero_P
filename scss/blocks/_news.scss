@@ -1,0 +1,16 @@
+.news{
+    padding: 0 0 clamp(5rem, 1.25rem + 15.38vw, 12.5rem);
+    &__items{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 36px 30px;
+    }
+    &__imgbox{
+        position: relative;
+    }
+    @media(max-width:767px){
+        &__items{
+            grid-template-columns: repeat(1,1fr);
+        }
+    }
+}

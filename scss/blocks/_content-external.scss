@@ -1,0 +1,25 @@
+.content-external{
+    display: flex;
+    flex-direction: column;
+    gap: 178px;
+    &__production{
+        display: flex;
+        flex-direction: column;
+        gap: 1px;
+    }
+    &__production-item{
+        opacity: 0.6;
+        letter-spacing: 0.16px;
+    }
+    &__conver{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    @media(max-width:1279px){
+        gap: 50px;
+    }
+    @media(max-width:410px){
+        gap: 41px;
+    }
+}

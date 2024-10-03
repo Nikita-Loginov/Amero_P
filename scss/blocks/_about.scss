@@ -1,0 +1,40 @@
+.about{
+    padding: 0 0 clamp(5rem, 1.25rem + 15.38vw, 12.5rem);
+    &__inner{
+        display: flex;
+        flex-direction: column;
+        gap: clamp(3.125rem, 1.781rem + 5.51vw, 5.813rem);
+    }
+    &__content{
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    &__textbox{
+        max-width: 750px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    &__text{
+        @extend %text;
+        letter-spacing: 0.2px;
+        &-opacity{
+            opacity: 0.6;
+        }
+    }
+    &__video{
+        background-color: #fff;
+        border-radius: 50px;
+    }
+    @media(max-width:1023px){
+        &__video{
+            height: 100%;
+        }
+    }
+    @media(max-width:510px){
+        &__video{
+            height: 291px;
+        }
+    }
+}

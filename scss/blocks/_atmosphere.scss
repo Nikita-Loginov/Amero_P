@@ -1,0 +1,71 @@
+.atmosphere{
+    margin: 0 0 clamp(5rem, 1.25rem + 15.38vw, 12.5rem);
+    padding: 85px 0;
+    position: relative;
+        &:before{
+            position: absolute;
+            content:"";
+            width: clamp(18.938rem, 13.188rem + 23.59vw, 30.438rem);
+            height: clamp(18.938rem, 13.188rem + 23.59vw, 30.438rem);
+            top: 0;
+            right: 50%;
+            transform: translateX(60%);
+            background-image: url(../img/atmosphere/earth.png);
+            z-index: -1;
+            background-size: cover;
+        }
+    &__inner{
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        align-items: center;
+    }
+    &__titlebox{
+        flex-basis: 415px;
+    }
+    &__title{
+        @extend %title;
+    }
+    &__textbox{
+        max-width: 235px;
+        display: flex;
+        flex-direction: column;
+        gap: 225px;
+        margin-right: 14px;
+    }
+    &__text--opacity{
+        opacity: 0.6;
+    }
+    @media(max-width:1023px){
+        padding: 0;
+    }
+    @media(max-width:550px){
+        &:before{
+            top: -34px;
+            right: -150px;
+            transform: translate(0);
+        }
+        &__inner{
+            flex-direction: column;
+            gap: 33px;
+        }
+        &__titlebox,
+        &__textbox{
+            flex-basis: auto;
+        }
+        &__textbox{
+            gap: 41px;
+            max-width: 100%;
+            width: 100%;
+        }
+        &__text{
+            max-width: 250px;
+            &--mediaRight{
+                margin-left: auto;
+            }
+        }
+        &__textbox{
+            margin-right: 0;
+        }
+    }
+}

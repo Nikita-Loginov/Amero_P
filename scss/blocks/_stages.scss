@@ -1,0 +1,79 @@
+.stages{
+    padding: 0 0 clamp(5rem, 1.25rem + 15.38vw, 12.5rem);
+    &__inner{
+        display: flex;
+        flex-direction: column;
+        gap: 55px;
+    }
+    &__title{
+        @extend %title;
+    }
+    &__items{
+        list-style: none;
+        counter-reset: customDecor 0;
+    }
+    &__item{
+        counter-increment: customDecor 1;
+        padding: 41px clamp(0rem, -6.304rem + 13.15vw, 3.313rem) 31px 0;
+        display: flex;
+        // justify-content: space-between;
+        gap: 20px;
+        border-bottom: 1px solid rgba(255, 255, 255,0.3);
+        &:first-of-type{
+            border-top: 1px solid rgba(255, 255, 255,0.3);
+        }
+    }
+    &__item-num{
+        position: relative;
+        &:before{
+            position: absolute;
+            content: '0' counter(customDecor);
+        }
+    }
+    &__item-title{
+        font-size: clamp(1.5rem, 0.75rem + 3.08vw, 3rem);
+        @extend %rubik-700;
+        line-height: 1;
+        text-transform: uppercase;
+        padding-left: clamp(1.25rem, -18.972rem + 42.18vw, 11.875rem);
+    }
+    &__item-text{
+        max-width: 350px;
+        margin-left: auto;
+    }
+    @media(max-width:767px){
+        &__inner{
+            gap: 38px;
+        }
+        &__item{
+            flex-direction: column;
+            padding-top: 20px;
+            padding-bottom: 30px;
+            gap: 16px;
+        }
+        &__item-num{
+            display: none;
+        }
+        &__item-title{
+            padding-left: 0;
+            padding-right: 20px;
+            position: relative;
+            &:before{
+                position: absolute;
+                content: '0' counter(customDecor);
+                right: 0;
+                font-size: 16px;
+                color:#fff;
+                font-family: "Rubik", sans-serif;
+                font-weight: 400;
+            }
+        }
+        &__item-text{
+            margin-left: 0;
+            max-width: 100%;
+        }
+    }
+    @media(max-width:410px){
+
+    }
+}

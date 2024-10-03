@@ -1,0 +1,59 @@
+.farm{
+    margin: 0 10px clamp(5rem, 1.25rem + 15.38vw, 12.5rem);
+    padding: clamp(3.125rem, 0.781rem + 9.62vw, 7.813rem) 0 clamp(3.125rem, -0.063rem + 13.08vw, 9.5rem);
+    border-radius: 50px;
+    backdrop-filter: blur(300px);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid #FFFFFF66;
+    position: relative;
+    &__inner{
+        display: flex;
+        flex-direction: column;
+        gap: 62px;
+    }
+    &__title{
+        @extend %title;
+        max-width: 520px;
+    }
+    &__content{
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+    }
+    &__content-external{
+        flex-basis: 300px;
+    }
+    @media(max-width:1279px){
+        padding: 50px 0;
+        &__inner{
+            gap: 50px;
+        }
+        &__title{
+            max-width: 100%;
+            text-align: center;
+        }
+        &__content{
+            flex-direction: column;
+            gap: 50px;
+        }
+        &__content-external{
+            flex-basis: auto;
+        }
+    }
+    @media(max-width:1279px){
+        .container{
+            padding: 0 30px;
+        }
+    }
+    @media(max-width:540px){
+        &__title{
+            text-align: start;
+        }
+    }
+    @media(max-width:410px){
+        
+        &__inner{
+            gap: 32px;
+        }
+    }
+}

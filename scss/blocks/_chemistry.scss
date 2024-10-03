@@ -1,0 +1,169 @@
+.chemistry{
+    padding: 0 0 clamp(5rem, 1.25rem + 15.38vw, 12.5rem);
+    &__inner{
+        display: flex;
+        flex-direction: column;
+        gap: 45px;
+        position: relative;
+        &:before{
+            position: absolute;
+            content:"";
+            width: clamp(12rem, -6.125rem + 74.36vw, 48.25rem);
+            height: clamp(10.5rem, -5.375rem + 65.13vw, 42.25rem);
+            background-image: url(../img/chemistry/bg.png);
+            z-index: -1;
+            top: 60px;
+            left: -131px;
+            background-size: cover;
+        }
+    }
+    &__items{
+        display: grid;
+        gap: 20px;
+        grid-template-columns: repeat(3,1fr);
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__item{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        &:not(:last-of-type){
+            position: relative;
+            padding-right: 98px;
+            &:before{
+                position: absolute;
+                content:"";
+                width: 76px;
+                height: 8px;
+                right: 0;
+                background-image: url(../img/icon/arrow.svg);
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+        }
+    }
+    &__item-text{
+        text-transform: uppercase;
+        font-size: clamp(2rem, 1.75rem + 1.03vw, 2.5rem);
+        @extend %rubik-700;
+        letter-spacing: 0px;
+    }
+    &__content{
+        display: flex;
+        flex-direction: column;
+        gap: 75px;
+        max-width: 592px;
+        margin-left: auto;
+        align-items: flex-start;
+    }
+    &__info{
+        display: flex;
+        flex-direction: column;
+        gap: 42px;
+    }
+    &__textbox{
+        display: flex;
+        flex-direction: column;
+        gap: 21px;
+    }
+    &__text{
+        letter-spacing: 0.16px;
+    }
+    &__text--opacity{
+        opacity: 0.6;
+    }
+    &__participation-text{
+        letter-spacing: 0.16px;
+        max-width: 545px;
+    }
+    &__link{
+        @extend %link;
+    }
+    @media(max-width:1279px){
+        &__item{
+            &:not(:last-of-type){
+                padding-right: 70px;
+                &:before{
+                    width: 56px;
+                    height: 8px;
+                }
+            }
+            &:not(:first-of-type){
+                padding-left: 0;
+            }
+        }
+    }
+    @media(max-width:1180px){
+        &__items{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+    }
+    @media(max-width:767px){
+        &__inner{
+            &:before{
+                top: 392px;
+                left: auto;
+                right: -80px;
+            }
+        }
+        &__items{
+            flex-direction: column;
+        }
+        &__content{
+            margin: 0;
+            max-width: 100%;
+            gap: 50px;
+        }
+        &__inner{
+            gap: 90px;
+        }
+        &__item{
+            width: 100%;
+            justify-content: center;
+            &:not(:last-of-type){
+                padding-right: 0;
+                padding-bottom: 76px;
+                &:before{
+                    rotate:90deg;
+                    bottom: 24px;
+                    left: 0;
+                    right: 0;
+                    margin: 0 auto;
+                }
+            }
+        } 
+    }
+    @media(max-width:550px){
+        &__item{
+            &:nth-child(2){
+                img{
+                    width: 93px;
+                    height: 120px;
+                    object-fit: cover;
+                }
+                
+            }
+            &:nth-child(3){
+                img{
+                    width: 99px;
+                    height: 71px;
+                    object-fit: cover;
+                }
+            }
+        }
+        &__link{
+            margin: 0 auto;
+        }
+    }
+    @media(max-width:550px){
+        &__items{
+            gap: 0;
+        }
+        &__inner{
+            gap: 107px;
+        }
+    }
+}

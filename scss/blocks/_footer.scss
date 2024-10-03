@@ -1,0 +1,35 @@
+.footer{
+    padding: 80px 0 98px;
+    margin: 0 10px;
+    border-radius: 50px 50px 0px 0px;
+    backdrop-filter: blur(300px);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid #FFFFFF66;
+    &__inner{
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+    }
+    &__content{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 20px;
+        align-items: flex-end;
+    }
+    &__link{
+        @extend %link;
+    }
+    @media(max-width:767px){
+        padding: 50px 0;
+        &__content{
+            display: grid;
+            grid-template-columns: repeat(2,1fr);
+            gap: 73px;
+        }
+        &__link{
+            grid-column: span 2;
+            justify-self: center;
+        }
+    }
+}

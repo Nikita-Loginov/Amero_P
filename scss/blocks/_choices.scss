@@ -1,0 +1,46 @@
+.header{
+    .choices{
+        margin: 0;
+    }
+    .choices__inner{
+        background-color: transparent;
+        min-height:auto;
+        border: none;
+    }
+    .choices__list--single {
+        padding: 0 18px 0 0;
+    }
+    .choices__list--dropdown .choices__list, .choices__list[aria-expanded] .choices__list{
+        overflow: visible;
+        color:#fff;
+        word-break: normal;
+    }
+    .is-open .choices__list--dropdown,
+    .is-open .choices__list[aria-expanded]{
+        border: 1px solid #000;
+    }
+    .choices__list--dropdown .choices__item--selectable.is-highlighted, .choices__list[aria-expanded] .choices__item--selectable.is-highlighted{
+        background-color: #7309ec;
+    }
+    .choices__list--dropdown .choices__item--selectable, .choices__list[aria-expanded] .choices__item--selectable{
+        background-color: #000;
+    }
+    .choices__list--dropdown .choices__item, .choices__list[aria-expanded] .choices__item{
+        padding: 5px;
+    }
+    .choices__item.choices__item--selectable{
+        font-size: 16px;
+    }
+    .choices[data-type*=select-one]::after{
+        background-image: url(../img/icon/arrowSelect.svg);
+        border:none;
+        width: 15px;
+        height: 12px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        margin: 0;
+        right: 0;
+        top: 50%;
+        transform: tr;
+    }
+}

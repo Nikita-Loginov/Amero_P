@@ -1,0 +1,20 @@
+.info-amero{
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    flex-basis: 300px;
+    color:#fff;
+    &__email{
+        color:#fff;
+    }
+    &__adress{
+        font-style: normal;
+        &-abr{
+            display: block;
+        }
+    }
+    @media(max-width:767px){
+        order:1;
+        grid-column: span 2;;
+    }
+}

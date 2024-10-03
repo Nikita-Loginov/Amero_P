@@ -1,0 +1,12 @@
+.footer-menu{
+    &__list{
+        display: flex;
+        flex-direction: column;
+        gap: 37px;
+    }
+    &__link{
+        text-transform: uppercase;
+        color:#fff;
+        letter-spacing: 0.2px;
+    }
+}
